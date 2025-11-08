@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asad Shopping Cart - ASSIGNMENT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="bg-blue-600 text-white py-4 shadow-md flex justify-between items-center px-6">
+    <div class="flex items-center space-x-3">
+      <i class="fa-solid fa-bag-shopping text-3xl"></i>
+      <h1 class="text-2xl font-semibold tracking-wide">Asad Store</h1>
+    </div>
+
+    <h2 class="hidden md:block text-sm font-medium italic opacity-90 md:text-2xl">
+      Build a Simple Shopping Cart System  <i class="fa-solid fa-heart " style="color:goldenrod;"></i>
+    </h2>
+
+    <div class="flex items-center space-x-5">
+      <i class="fa-solid fa-magnifying-glass text-xl cursor-pointer hover:text-gray-200"></i>
+      <i class="fa-solid fa-user text-xl cursor-pointer hover:text-gray-200"></i>
+      <div class="relative">
+        <i class="fa-solid fa-cart-shopping text-xl cursor-pointer hover:text-gray-200"></i>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-xs font-bold text-white rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="bg-white p-6 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Available Products</h2>
+      <div id="products" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+    </section>
+
+    <section class="bg-white p-6 rounded-2xl shadow-md">
+      <h2 class="text-2xl font-bold mb-4 text-green-600">Your Cart</h2>
+      <div id="cart" class="space-y-3 text-gray-700"></div>
+      <div class="mt-4 border-t pt-3 flex justify-between items-center">
+        <p class="font-semibold text-lg">Total:</p>
+        <p class="font-bold text-xl text-blue-600">Rs.<span id="total">0</span></p>
+      </div>
+      <button id="checkout" class="mt-4 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Checkout</button>
+    </section>
+  </main>
+
+
+</body>
+<script src="shopingcart.js"></script>
+</html>
